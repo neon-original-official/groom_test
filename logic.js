@@ -24,26 +24,20 @@ function mulai() {
   rollQ()
 }
 
-function answer_ya() {
-  calc(currentQuestion[1])
-  addToTable(currentQuestion[0], "Ya")
-  rollQ()
-}
+function answer(j) {
+  switch(j) {
+    case "Ya":
+      calc(currentQuestion[1])
+      break
+    case "Tidak":
+      break
+    case "Kadang":
+    case "Jarang":
+      calc(currentQuestion[1]/2)
+      break
+  }
 
-function answer_kadang() {
-  calc(currentQuestion[1]/2)
-  addToTable(currentQuestion[0], "Kadang")
-  rollQ()
-}
-
-function answer_jarang() { // maybe improve this in the future
-  calc(currentQuestion[1]/2)
-  addToTable(currentQuestion[0], "Jarang")
-  rollQ()
-}
-
-function answer_tidak() {
-  addToTable(currentQuestion[0], "Tidak")
+  addToTable(currentQuestion[0], j)
   rollQ()
 }
 

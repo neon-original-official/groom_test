@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Karbit Tester</title>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="questions.json" as="fetch">
+    <link rel="preload" href="scores.json" as="fetch">
+    <link rel="preload" href="logic.js" as="script">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <script src="logic.js"></script>
+  <body>
+    <div id="title">
+      <h1>Karbit tester</h1>
+      <small><i>Dimana hidup sudah terlalu karbit, Maka hadirlah karbit tester</i></small>
+      <p>Tes Karbit dengan menjawab 20 pertanyaan</p>
+    </div>
+    <div id="permulaan">
+      <span>Mulai Tes?</span>
+      <button onclick="mulai()">Mulai Tes</button>
+    </div>
+    <div class="box hidden" id="pertanyaandiv">
+      <h2>Pertanyaan No.
+        <span id="no_pertanyaan">1</span></h2>
+      <span id="pertanyaan">Sebuah pertanyaan</span><br>
+      <div id="jawabandiv">
+        <button onclick="answer_ya()">Ya</button>
+        <button onclick="answer_kadang()">Kadang</button>
+        <button onclick="answer_jarang()">Jarang</button>
+        <button onclick="answer_tidak()">Tidak</button>
+      </div>
+    </div>
+    <div class="hidden" id="hasildiv">
+      <div class="box">
+        <h2>Hasil Tes</h2>
+        <span>Persentase Karbit:
+          <span id="persentase"><span id="persen">?</span>%</span></span><br>
+        <small>Lu adalah...</small>
+        <span id="hasil">BELUM DINILAI, KOK LIHAT SAYA?</span>
+      </div>
+      <div class="box">
+        <table id="tabelhasil">
+          <caption>
+            Pertanyaan-pertanyaan yang dijawab
+          </caption>
+          <tr>
+            <th>Pertanyaan</th>
+            <th>Jawaban</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -43,7 +43,7 @@ function answer_jarang() { // maybe improve this in the future
 }
 
 function answer_tidak() {
-  calc(currentQuestion[1]*(-1))
+  calc(currentQuestion[1])
   addToTable(currentQuestion[0], "Tidak")
   rollQ()
 }
